@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container back">
       <app-header></app-header>
       <div class="row">
             <div class="col-xs-12">
@@ -21,6 +21,10 @@ import Header from './Components/Header.vue';
 </script>
 
 <style>
+body{
+  display: flex;
+  background-image: url('./assets/background.jpg');
+}
   .slide-enter-active {
         animation: slide-in 200ms ease-out forwards;
     }

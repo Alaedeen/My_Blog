@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Some blogs</h1>
+    <input class="form-control form-control-lg" type="text" placeholder="find blogs">
   </div>
 </template>
 
