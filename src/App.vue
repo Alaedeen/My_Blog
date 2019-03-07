@@ -17,6 +17,10 @@ import Header from './Components/Header.vue';
         components: {
             appHeader: Header
         },
+        created() {
+          console.log(this.$store.getters.blogs)
+          this.$store.dispatch('blog/initBlogs');
+        },
     }
 </script>
 
