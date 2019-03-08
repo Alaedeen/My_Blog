@@ -16,6 +16,9 @@ const mutations = {
   },
   'ADD_BLOG' (state, blog){
     state.blogs.push(blog)
+    },
+    'ADD_COMMENT'(state , comm){
+      state.blogs[comm.id].comments.splice(0, 0, comm.comment)
     }
 }
 
@@ -26,6 +29,9 @@ const actions = {
   addBlog: ({commit}, order) => {
     commit('ADD_BLOG', order)
   },
+  addComment: ({commit}, order) => {
+    commit('ADD_COMMENT', order)
+  }
 }
 
 

@@ -2,7 +2,7 @@
   <nav class="navbar navbar-dark my-nav">
         <div class="container-fluid">
             <div class="navbar-header">
-                <router-link  to="/" class="navbar-brand route">Stock Trader</router-link>
+                <router-link  to="/" class="navbar-brand route">Alaedeen Eloueryemmi</router-link>
             </div>
 
             <div class="collapse navbar-collapse">

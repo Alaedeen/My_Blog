@@ -23,7 +23,6 @@ export default {
   data() {
     return {
       search:'',
-      blogs: this.$store.state.blog.blogs
     }
   },
 

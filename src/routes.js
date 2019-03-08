@@ -1,6 +1,5 @@
 import Home from './Components/Home.vue';
 import Resume from './Components/CV/CV.vue';
-import blogg from './Components/blog/blog.vue'
 
 const BlogStart = resolve => {
   require.ensure(['./Components/blog/blogHome.vue'], () => {
@@ -26,12 +25,13 @@ const AddBlog = resolve => {
 export const routes = [
   { path: '/', component: Home },
   { path: '/blog',
-    components:{ 
+    components:{
       default: BlogStart,
     },
     children: [
       {
         path: '',
+        name:'blog',
         component: Blog,
       }, {
         path: 'new',
@@ -51,5 +51,5 @@ export const routes = [
     ]
    },
   { path: '/resume', component: Resume },
-  {path: '*', redirect: '/'}
+  {path: '*', redirect: '/'},
 ];
