@@ -4,6 +4,12 @@ const state ={
   blogs: []
 }
 
+const getters = {
+  blogs: state => {
+    return state.blogs
+  }
+}
+
 const mutations = {
   'SET_BLOGS' (state, blogs){
       state.blogs=blogs;
@@ -22,11 +28,7 @@ const actions = {
   },
 }
 
-const getters = {
-  blogs: state =>{
-    return state.blogs
-  }
-}
+
 
 export const blog = {
   namespaced:true,

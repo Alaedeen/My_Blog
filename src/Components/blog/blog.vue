@@ -1,5 +1,5 @@
 <template>
-  <div class="col-sm-6 col-md-4">
+  <div class="col-sm-6 col-md-4" @click="navigate()">
     <div class="card" style="width: 18rem;">
     <img src="../../assets/logo.png" class="card-img-top" >
     <div class="card-body">
@@ -12,8 +12,19 @@
 
 <script>
 export default {
-  props: ['blog']
+  props: ['blog'],
+  data() {
+    return {
+      link: 'blog/' + this.blog.id
+    }
+  },
+  methods: {
+    navigate(){
+      this.$router.push({path:this.link})
+    }
+  },
 }
+
 </script>
 
 <style>

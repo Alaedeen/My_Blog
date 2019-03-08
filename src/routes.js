@@ -1,5 +1,6 @@
 import Home from './Components/Home.vue';
 import Resume from './Components/CV/CV.vue';
+import blogg from './Components/blog/blog.vue'
 
 const BlogStart = resolve => {
   require.ensure(['./Components/blog/blogHome.vue'], () => {
@@ -25,13 +26,13 @@ const AddBlog = resolve => {
 export const routes = [
   { path: '/', component: Home },
   { path: '/blog',
-    components:{
+    components:{ 
       default: BlogStart,
     },
     children: [
       {
         path: '',
-        component: Blog
+        component: Blog,
       }, {
         path: 'new',
         component: AddBlog,
@@ -44,14 +45,6 @@ export const routes = [
           path: ':id',
           component: BlogDetails, beforeEnter: (to, from, next) => {
             console.log('inside route setup');
-            next();
-          }
-        },
-        {
-          path: 'new',
-          component: AddBlog,
-          beforeEnter: (to, from, next) => {
-            console.log('inside new');
             next();
           }
         },
