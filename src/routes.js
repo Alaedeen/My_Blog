@@ -1,5 +1,6 @@
 import Home from './Components/Home.vue';
 import Resume from './Components/CV/CV.vue';
+import Login from './Components/accounts/login.vue'
 
 const BlogStart = resolve => {
   require.ensure(['./Components/blog/blogHome.vue'], () => {
@@ -51,5 +52,9 @@ export const routes = [
     ]
    },
   { path: '/resume', component: Resume },
+  {
+    path: '/login',
+    component: Login
+  },
   {path: '*', redirect: '/'},
 ];
